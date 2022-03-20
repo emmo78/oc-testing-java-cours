@@ -27,7 +27,8 @@ public class Calculator {
 
 		for (int i = 0; i < numberString.length(); i++) {
 			if (numberString.charAt(i) != '-') {
-				integers.add(Integer.parseInt(numberString, i, i + 1, 10));
+				integers.add(Character.getNumericValue(numberString.charAt(i)));
+				//integers.add(Integer.parseInt(numberString, i, i + 1, 10));
 			}
 		}
 		return integers;
